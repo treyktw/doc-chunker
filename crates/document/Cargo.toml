@@ -1,0 +1,22 @@
+[package]
+name = "document-extract"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Normalizes PDF, DOCX, PPTX, HTML, Markdown, and plain text into positioned blocks"
+publish = false
+
+[dependencies]
+async-trait.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["rt"] }
+
+pdf-extract = "0.12"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+quick-xml = "0.42"
+zip = { version = "8", default-features = false, features = ["deflate"] }
+
+[dev-dependencies]
+tokio.workspace = true

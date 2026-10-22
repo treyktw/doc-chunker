@@ -1,0 +1,11 @@
+[package]
+name = "chunking"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Structure-first chunking that keeps page, timestamp and section on every chunk"
+publish = false
+
+[dependencies]
+serde.workspace = true
